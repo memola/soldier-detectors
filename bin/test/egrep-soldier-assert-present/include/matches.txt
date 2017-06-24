@@ -1,0 +1,89 @@
+# first person singular present
+Gansley I am a Soldier you know
+Gansley I am soldier you know
+By Gansley, I am a soldier you know
+I, a soldier, know Gansley
+I only seem a soldier Gansley
+I seem a soldier
+I am no soldier you know
+I am not a soldier you know
+soldier I seem
+
+# second person singular present
+Woolsley you are a Soldier you know
+Woolsley thou art a Soldier you know
+Woolsley ye are a Soldier you know
+Woolsley ye art a Soldier you know
+Woolsley you are soldier you know
+Woolsley, you are a soldier you know
+Woolsley, you a soldier you know
+Woolsley you a soldier you know
+Woolsley ye a soldier you know
+Woolsley thou a soldier you know
+you seem a soldier Woolsley
+you seem soldier Woolsley
+you are no soldier you know
+you are not a soldier you know
+thou art not a soldier you know
+you a soldier?
+thou a soldier?
+art thou soldier?
+you be a soldier
+you be not a soldier
+soldier you seem
+soldier thou seem
+
+# third person singular present
+Farsley she is a Soldier you know
+Farsley she is soldier you know
+Farsley, she is a soldier you know
+Farsley, she a soldier you know
+Farsley he is a Soldier you know
+Farsley he is soldier you know
+Farsley, he is a soldier you know
+Farsley, he a soldier you know
+he seems a soldier Farsley
+he seems soldier Farsley
+he is no soldier you know
+he is not a soldier you know
+she seems a soldier Farsley
+she seems soldier Farsley
+she is no soldier you know
+she is not a soldier you know
+
+# plural
+we are Soldier
+we are soldiers
+we are not soldiers
+we are no soldiers
+we, not soldiers
+we soldiers are sturdy
+we soldiers sturdy and stolid
+we seem soldiers
+they are Soldier
+they are soldiers
+they are not soldiers
+they are no soldiers
+they, not soldiers
+they seem soldiers
+
+# contractions
+Im a soldier
+I me a soldier
+I me soldier
+I'm a soldier
+I'me a soldier
+I'me soldier
+your a soldier
+youre a soldier
+you're a soldier
+th'art a soldier
+thart a soldier
+thou'rt a soldier
+thou 'rt a soldier
+he's a soldier
+hes a soldier
+she's a soldier
+shes a soldier
+they're soldiers
+theyre soldiers
