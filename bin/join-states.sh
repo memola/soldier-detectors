@@ -1,4 +1,7 @@
 #!/bin/bash
+bindir=`dirname $0`
+tmpdir=$bindir/tmp
+mkdir $tmpdir
 DIR=`dirname $1`
 if [ $DIR = '.' ]; then
 	DIR=$1
@@ -8,16 +11,16 @@ else
 	prefix="${prefix}_"
 fi
 
-./egrep-soldier-assert-present.sh $1 | tr $'\n' '*' | sed -e $'s|*'$DIR'|'$'\\\n'$DIR'|g' > working-soldier-states1.txt
-found=`wc -l working-soldier-states1.txt`
+$bindir/egrep-soldier-assert-present.sh $1 | tr $'\n' '*' | sed -e $'s|*'$DIR'|'$'\\\n'$DIR'|g' > $tmpdir/working-soldier-states1.txt
+found=`wc -l $tmpdir/working-soldier-states1.txt`
 echo "found $found lines total"
-./egrep-soldier-assert-past.sh $1 | tr $'\n' '*' | sed -e $'s|*'$DIR'|'$'\\\n'$DIR'|g' > working-soldier-states2.txt
-found=`wc -l working-soldier-states2.txt`
+$bindir/egrep-soldier-assert-past.sh $1 | tr $'\n' '*' | sed -e $'s|*'$DIR'|'$'\\\n'$DIR'|g' > $tmpdir/working-soldier-states2.txt
+found=`wc -l $tmpdir/working-soldier-states2.txt`
 echo "found $found lines total"
-./egrep-gentleman-assert.sh $1 | tr $'\n' '*' | sed -e $'s|*'$DIR'|'$'\\\n'$DIR'|g' | grep -i soldier > working-soldier-states3.txt
-found=`wc -l working-soldier-states3.txt`
+$bindir/egrep-gentleman-assert.sh $1 | tr $'\n' '*' | sed -e $'s|*'$DIR'|'$'\\\n'$DIR'|g' | grep -i soldier > $tmpdir/working-soldier-states3.txt
+found=`wc -l $tmpdir/working-soldier-states3.txt`
 echo "found $found lines total"
-cat working-soldier-states1.txt working-soldier-states2.txt working-soldier-states3.txt | sort | uniq > simple-soldier-states.txt
+cat $tmpdir/working-soldier-states1.txt $tmpdir/working-soldier-states2.txt $tmpdir/working-soldier-states3.txt | sort | uniq > simple-soldier-states.txt
 
 # removed reintroduction of newlines
 # | tr '*' $'\n'
@@ -33,6 +36,5 @@ cat working-soldier-states1.txt working-soldier-states2.txt working-soldier-stat
 #
 #	echo "$tcp,$vep,$date,\"$text\""
 #done
-
-echo "${prefix}soldier-post1642.csv"
-python join.py $1 "${prefix}soldier-post1642.csv"
+echo "${prefix}soldier.csv"
+python $bindir/join.py $1 "${prefix}soldier.csv"
