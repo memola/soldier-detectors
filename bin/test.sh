@@ -6,12 +6,14 @@ testdir="$bindir/test"
 
 tmpdir="$testdir/tmp"
 
-cases=("egrep-soldier-assert-present")
+cases=("egrep-soldier-assert-present egrep-soldier-assert-present egrep-gentleman-assert")
 
 for case in $cases; do
 	casedir="$testdir/$case"
 	mkdir -p $tmpdir/$case
-	rm -r $tmpdir/$case/*
+	if [ "$(ls -A $tmpdir/$case)" ]; then
+		rm -r $tmpdir/$case/*
+	fi
 	ctr=0
 	while IFS='$\n' read -r line; do
 		ctr=$(($ctr+1))
@@ -19,10 +21,12 @@ for case in $cases; do
 		mkdir -p $tmpdir/$case/$fname
 		echo $line > $tmpdir/$case/$fname/yes.txt
 	done < <(grep -v -e '^#' $casedir/include/matches.txt | grep -v -e '^$')
-	ctr=$(($ctr+1))
-	fname=`printf %03d $ctr`
-	mkdir -p $tmpdir/$case/$fname
-	grep -v -e '^#' $casedir/include/multiline.txt | grep -v -e '^$' > $tmpdir/$case/$fname/yes.txt
+	if [ -e $casedir/include/multiline.txt ]; then
+		ctr=$(($ctr+1))
+		fname=`printf %03d $ctr`
+		mkdir -p $tmpdir/$case/$fname
+		grep -v -e '^#' $casedir/include/multiline.txt | grep -v -e '^$' > $tmpdir/$case/$fname/yes.txt
+	fi
 
 	while IFS='$\n' read -r line; do
 		ctr=$(($ctr+1))
