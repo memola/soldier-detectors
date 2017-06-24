@@ -37,3 +37,7 @@ pcregrep -i -M "th[\s]*'?art([\s,()]+a?)?[\s,()]+(${titles})s?\b" $1/*
 pcregrep -i -M "they[\s]*'?re?([\s,()]+a?)?[\s,()]+(${titles})s?\b" $1/*
 pcregrep -i -M "you[\s]*'re?([\s,()]+a?)?[\s,()]+(${titles})s?\b" $1/*
 pcregrep -i -M "youre?([\s,()]+a)[\s,()]+(${titles})s?\b" $1/*
+
+# past states
+pcregrep -i -M "\b(was|were)([\s,()]+not?)?([\s,()]+(a|thier|my|y?our))?[\s,()]+([a-z]+-)?(${titles})s?\b" $1/*
+pcregrep -i -M "\b(ha(ve|s)\s(not\s)?b(ee|i)n)[\s,()]([\s,()]+not?)?([\s,()]+(a|thier|my|y?our))?[\s,()]+([a-z]+-)?(${titles})s?\b" $1/*
