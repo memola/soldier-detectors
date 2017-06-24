@@ -1,6 +1,7 @@
 #!python
 from sys import argv
 from sys import stdout
+from os.path import basename
 import csv
 import re
 vep_metadata = {}
@@ -15,41 +16,33 @@ with open('VEP_Expanded_Drama_1700_Metadata.csv','r') as csvfile:
 	# notes,text_name,status
 
 	for row in metadata:
-		vep_metadata[argv[1] + '/' + row['text_name']] = row
-if len(argv) > 2:
-	out = open(argv[2], 'w')
+		vep_metadata[row['text_name']] = row
+if len(argv) > 3:
+	out = open(argv[3], 'w')
 else:
 	out = stdout
 writer = csv.writer(out, lineterminator="\n")
 writer.writerow(['PLAYWRIGHT','STC','TITLE','GENRE','DATE PERFORMANCE','TEXT','COLLECTION?','FILE'])
-with open('simple-soldier-states.txt', 'r') as matches:
+with open(argv[2], 'r') as matches:
 	buf = []
 	for line in matches:
-		if line == "--\n":
-			if key == None: continue
-			if len(buf) == 0: continue
-			match = "".join(buf).strip()
-			metadata = vep_metadata.get(key)
-			if metadata == None:
-				print "no metadata entry for " + key
-				metadata = {'title': key}
-			author = metadata.get('author', '')
-			author = author + ';' + metadata.get('author 2','')
-			author = author + ';' + metadata.get('author 3','')
-			author = author + ';' + metadata.get('author 4','')
-			author = author + ';' + metadata.get('author 5','')
-			author = author.strip(';')
-			genre = metadata.get('DEEP genre', '')
-			date = metadata.get('date of 1st performance', '')
-			stc = metadata.get('estc', '')
-			title = metadata['title']
-			file_name = metadata['text_name']
-			writer.writerow([author, stc, title, genre, date, match, not key.endswith('headed.txt'), file_name])
-			buf = []
-		else:
-			key, match = re.split('\.txt[-:]',line,1)
-			key = key + '.txt'
-			if line.endswith('.txt-\n'): continue
-			buf.append(match)
-if len(argv) > 2:
+		key, match = line.split(':',1)
+		key = basename(key)
+		metadata = vep_metadata.get(key)
+		if metadata == None:
+			print "no metadata entry for " + key
+			metadata = {'title': key}
+		author = metadata.get('author', '')
+		author = author + ';' + metadata.get('author 2','')
+		author = author + ';' + metadata.get('author 3','')
+		author = author + ';' + metadata.get('author 4','')
+		author = author + ';' + metadata.get('author 5','')
+		author = author.strip(';')
+		genre = metadata.get('DEEP genre', '')
+		date = metadata.get('date of 1st performance', '')
+		stc = metadata.get('estc', '')
+		title = metadata['title']
+		file_name = metadata.get('text_name','')
+		writer.writerow([author, stc, title, genre, date, match.strip(), not key.endswith('headed.txt'), file_name])
+if len(argv) > 3:
 	out.close
