@@ -21,7 +21,7 @@ if len(argv) > 2:
 else:
 	out = stdout
 writer = csv.writer(out, lineterminator="\n")
-writer.writerow(['PLAYWRIGHT','STC','TITLE','GENRE','DATE PERFORMANCE','TEXT','COLLECTION?'])
+writer.writerow(['PLAYWRIGHT','STC','TITLE','GENRE','DATE PERFORMANCE','TEXT','COLLECTION?','FILE'])
 with open('simple-soldier-states.txt', 'r') as matches:
 	buf = []
 	for line in matches:
@@ -43,7 +43,8 @@ with open('simple-soldier-states.txt', 'r') as matches:
 			date = metadata.get('date of 1st performance', '')
 			stc = metadata.get('estc', '')
 			title = metadata['title']
-			writer.writerow([author, stc, title, genre, date, match, not key.endswith('headed.txt')])
+			file_name = metadata['text_name']
+			writer.writerow([author, stc, title, genre, date, match, not key.endswith('headed.txt'), file_name])
 			buf = []
 		else:
 			key, match = re.split('\.txt[-:]',line,1)
