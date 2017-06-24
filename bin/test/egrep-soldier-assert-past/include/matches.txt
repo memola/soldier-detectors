@@ -1,2 +1,3 @@
 # first person plural
 Farley, we two have been soldiers
+Farley, we two have bin soldiers
