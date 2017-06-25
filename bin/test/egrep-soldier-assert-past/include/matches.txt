@@ -2,7 +2,6 @@
 I was a soldier then
 She was a soldier then
 We were soldiers then
-they were your soldiers then
 Farley, we two have been soldiers
 Farley, we two have bin soldiers
 Farley, we two have ben soldiers
@@ -11,3 +10,13 @@ Farley, we two had been soldiers
 had she ben soldier
 had he not ben soldier
 
+I was not a soldier
+she was not a soldier
+he was not a soldier
+they were not soldiers
+
+Farley, we two have not been soldiers
+Farley, we two have not bin soldiers
+Farley, we two have not ben soldiers
+Farley, we two hath not been soldiers
+Farley, we two had not been soldiers

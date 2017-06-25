@@ -2,13 +2,11 @@
 Gansley I am a Soldier you know
 Gansley I am soldier you know
 By Gansley, I am a soldier you know
-I, a soldier, know Gansley
 I only seem a soldier Gansley
 I seem a soldier
 I am no soldier you know
 I am not a soldier you know
-soldier I seem
-I am your soldier
+am I a soldier, Gansley?
 
 # second person singular present
 Woolsley you are a Soldier you know
@@ -31,8 +29,6 @@ thou a soldier?
 art thou soldier?
 you be a soldier
 you be not a soldier
-soldier you seem
-soldier thou seem
 
 # third person singular present
 Farsley she is a Soldier you know
@@ -51,13 +47,18 @@ she seems a soldier Farsley
 she seems soldier Farsley
 she is no soldier you know
 she is not a soldier you know
+he be a soldier
+she be a soldier
+they be soldiers
+he be no soldier
+she be no soldier
+they be no soldier
 
 # plural
 we are Soldier
 we are soldiers
 we are not soldiers
 we are no soldiers
-we, not soldiers
 we soldiers are sturdy
 we soldiers sturdy and stolid
 we seem soldiers
@@ -65,7 +66,6 @@ they are Soldier
 they are soldiers
 they are not soldiers
 they are no soldiers
-they, not soldiers
 they seem soldiers
 
 # contractions
