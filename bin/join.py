@@ -42,7 +42,7 @@ with open(argv[2], 'r') as matches:
 		date = metadata.get('date of 1st performance', '')
 		stc = metadata.get('estc', '')
 		title = metadata['title']
-		file_name = metadata.get('text_name','')
+		file_name = metadata.get('text_name',key)
 		writer.writerow([author, stc, title, genre, date, match.strip(), not key.endswith('headed.txt'), file_name])
 if len(argv) > 3:
 	out.close
