@@ -6,7 +6,7 @@ testdir="$bindir/test"
 
 tmpdir="$testdir/tmp"
 
-cases=("egrep-soldier-assert-present egrep-soldier-assert-present egrep-gentleman-assert")
+cases=("egrep-soldier-assert-present egrep-soldier-assert-past egrep-gentleman-assert")
 
 for case in $cases; do
 	casedir="$testdir/$case"
