@@ -1,4 +1,5 @@
 Gansley I am a sturdy soldier you know
+Gansley I am soldier you know
 I, Gansley, a soldier you know
 I Gansley a soldier you know
 I a sturdy soldier know Gansley
@@ -19,7 +20,8 @@ thou art not a sturdy soldier you know
 a soldier seem you
 
 
-
+Farsley she is soldier you know
+Farsley he is soldier you know
 Farsley he is a sturdy soldier you know
 Farsley he a sturdy soldier you know
 he only seems a sturdy soldier Farsley
@@ -36,9 +38,55 @@ we are no sturdy soldiers
 we seem like sturdy soldiers
 we seem sturdy soldiers
 sturdy soldiers seem we but no
+we soldiers are sturdy
+we soldiers sturdy and stolid
 we, not soldiers
 
 tis a soldier
 twas a soldier
-
+if it is a soldier
 they, not soldiers
+
+# refinements
+no one says ime soldier
+I me soldier also no one says
+By no means, though by the Alcharon wine be forbidden, you Soldiers in that
+we seem soldiers
+they seem soldiers
+she seems soldier Farsley
+he seems soldier Farsley
+you seem soldier Woolsley
+I seem soldier
+to make him a scholar, a soldier
+
+# samples
+shied with the the spear of ye soldier. Where either,
+as the prime soldier, so the subprime soldier.
+Bring him soldiers!
+Miles does in Latin, which is Soldier, I know not. Some hold opinion that
+em: you must pardon him gentlemen, a fresh Soldier wants seasoning
+
+What outrage is this you soldiers?
+Yet I do hope a time wherein we Soldiers,
+I shall be proud to be your Soldier, sir.
+
+# soldier-like will be a different script
+Take it then thus. All must be Soldier-like;
+I see it in thy eyes. I charge you soldiers
+
+# agreement
+
+one Peaze was a Soldiers provant a whole day, at the destruction of Jerusalem.
+And took my chance, danger is a Soldiers honor;
+I am a soldiers wife sir,
+Envy can speak, She is a Soldiers Daughter,
+Let every Scholar be a Soldiers friend
+I soldiers feed shall mince him, and my Poets
+If I may choose, I will be a soldiers wife.
+And leads is gentleman to his soldiers
+And lead is gentlemen to his soldier
+And lead is scholar to his soldiers
+And leads is scholars to his soldier
+
+# oddities
+Infantaria of our Protestant Churches Soldiers, do teach, that touching so

@@ -1,6 +1,5 @@
 # first person singular present
 Gansley I am a Soldier you know
-Gansley I am soldier you know
 By Gansley, I am a soldier you know
 I only seem a soldier Gansley
 I seem a soldier
@@ -20,7 +19,6 @@ Woolsley you a soldier you know
 Woolsley ye a soldier you know
 Woolsley thou a soldier you know
 you seem a soldier Woolsley
-you seem soldier Woolsley
 you are no soldier you know
 you are not a soldier you know
 thou art not a soldier you know
@@ -32,19 +30,15 @@ you be not a soldier
 
 # third person singular present
 Farsley she is a Soldier you know
-Farsley she is soldier you know
 Farsley, she is a soldier you know
 Farsley, she a soldier you know
 Farsley he is a Soldier you know
-Farsley he is soldier you know
 Farsley, he is a soldier you know
 Farsley, he a soldier you know
 he seems a soldier Farsley
-he seems soldier Farsley
 he is no soldier you know
 he is not a soldier you know
 she seems a soldier Farsley
-she seems soldier Farsley
 she is no soldier you know
 she is not a soldier you know
 he be a soldier
@@ -59,22 +53,21 @@ we are Soldier
 we are soldiers
 we are not soldiers
 we are no soldiers
-we soldiers are sturdy
-we soldiers sturdy and stolid
-we seem soldiers
+we are not all soldiers
+we are all soldiers
 they are Soldier
 they are soldiers
+they are all soldiers
 they are not soldiers
+they are not all soldiers
 they are no soldiers
-they seem soldiers
 
 # contractions
 Im a soldier
 I me a soldier
-I me soldier
 I'm a soldier
+Ime a soldier
 I'me a soldier
-I'me soldier
 your a soldier
 youre a soldier
 you're a soldier
@@ -88,3 +81,12 @@ she's a soldier
 shes a soldier
 they're soldiers
 theyre soldiers
+
+# participles
+Being both a soldier and philosopher,
+
+# samples
+When this is done, then are ye soldiers, you know
+wit is a soldier, but worry isn't.
+they will be soldiers
+I will be a soldier
