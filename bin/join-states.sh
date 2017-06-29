@@ -1,4 +1,5 @@
 #!/bin/bash
+export histchars='¡^'
 bindir=`dirname $0`
 tmpdir=$bindir/tmp
 mkdir $tmpdir
@@ -11,13 +12,13 @@ else
 	prefix="${prefix}_"
 fi
 
-$bindir/egrep-soldier-assert-present.sh $1 | tr $'\n' '*' | sed -e $'s|*'$DIR'|'$'\\\n'$DIR'|g' > $tmpdir/working-soldier-states1.txt
+$bindir/egrep-soldier-assert-present.sh $1 | tr $'\n' '*' | sed -e $'s|*'$DIR'|'$'\\\n'$DIR'|g' | sed -e 's|\**$||' | sed -e 's|\s*$||' > $tmpdir/working-soldier-states1.txt
 found=`wc -l $tmpdir/working-soldier-states1.txt`
 echo "found $found lines total"
-$bindir/egrep-soldier-assert-past.sh $1 | tr $'\n' '*' | sed -e $'s|*'$DIR'|'$'\\\n'$DIR'|g' > $tmpdir/working-soldier-states2.txt
+$bindir/egrep-soldier-assert-past.sh $1 | tr $'\n' '*' | sed -e $'s|*'$DIR'|'$'\\\n'$DIR'|g' | sed -e 's|\**$||' | sed -e 's|\s*$||' > $tmpdir/working-soldier-states2.txt
 found=`wc -l $tmpdir/working-soldier-states2.txt`
 echo "found $found lines total"
-$bindir/egrep-gentleman-assert.sh $1 | tr $'\n' '*' | sed -e $'s|*'$DIR'|'$'\\\n'$DIR'|g' | grep -i soldier > $tmpdir/working-soldier-states3.txt
+$bindir/egrep-gentleman-assert.sh $1 | tr $'\n' '*'| sed -e $'s|*'$DIR'|'$'\\\n'$DIR'|g' | grep -i soldier  | sed -e 's|\**$||' | sed -e 's|\s*$||' > $tmpdir/working-soldier-states3.txt
 found=`wc -l $tmpdir/working-soldier-states3.txt`
 echo "found $found lines total"
 cat $tmpdir/working-soldier-states1.txt $tmpdir/working-soldier-states2.txt $tmpdir/working-soldier-states3.txt | sort | uniq > $tmpdir/simple-soldier-states.txt
@@ -38,3 +39,4 @@ cat $tmpdir/working-soldier-states1.txt $tmpdir/working-soldier-states2.txt $tmp
 #done
 echo "${prefix}soldier.csv"
 python $bindir/join.py $1 $tmpdir/simple-soldier-states.txt "${prefix}soldier.csv"
+unset histchars

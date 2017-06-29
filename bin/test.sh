@@ -1,4 +1,5 @@
 #!/bin/bash
+export histchars='¡^'
 
 bindir=`dirname $0`
 
@@ -48,3 +49,4 @@ for case in $cases; do
 		fi
 	done
 done
+unset histchars
