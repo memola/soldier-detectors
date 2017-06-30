@@ -17,6 +17,23 @@ with open('VEP_Expanded_Drama_1700_Metadata.csv','r') as csvfile:
 
 	for row in metadata:
 		vep_metadata[row['text_name']] = row
+with open('VEP_EM1080_Metadata.csv','r') as csvfile:
+	metadata = csv.DictReader(csvfile)
+	# TCP,ESTC,text_name,Title,Title 30 Char or fewer,Author,Physical Description,
+	# Phys Desc Notes,Derived Date,Publication Place,Publisher,Verse/Prose/Mixed,
+	# Helsinki Prototypical Text Category,Non-Helsinki Prototypical,Status,Notes
+
+	for row in metadata:
+		if row['text_name'] in vep_metadata: continue
+		new_row = {}
+		new_row['author'] = row['Author']
+		new_row['date of 1st performance'] = row['Derived Date']
+		new_row['text_name'] = row['text_name']
+		new_row['stc'] = row['ESTC']
+		new_row['title'] = row['Title 30 Char or fewer']
+		new_row['DEEP genre'] = row['Verse/Prose/Mixed']
+		vep_metadata[row['text_name']] = new_row
+
 if len(argv) > 3:
 	out = open(argv[3], 'w')
 else:

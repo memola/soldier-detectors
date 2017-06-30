@@ -21,7 +21,24 @@ echo "found $found lines total"
 $bindir/egrep-gentleman-assert.sh $1 | tr $'\n' '*'| sed -e $'s|*'$DIR'|'$'\\\n'$DIR'|g' | grep -i soldier  | sed -e 's|\**$||' | sed -e 's|\s*$||' > $tmpdir/working-soldier-states3.txt
 found=`wc -l $tmpdir/working-soldier-states3.txt`
 echo "found $found lines total"
-cat $tmpdir/working-soldier-states1.txt $tmpdir/working-soldier-states2.txt $tmpdir/working-soldier-states3.txt | sort | uniq > $tmpdir/simple-soldier-states.txt
+touch $tmpdir/working-soldier-states4.txt
+touch $tmpdir/working-soldier-states5.txt
+touch $tmpdir/working-soldier-states6.txt
+TDIR=$DIR/restricted/ReprocessedSimpleText
+if [ -e $TDIR ]; then
+	RDIR=`dirname $TDIR`
+	$bindir/egrep-soldier-assert-present.sh $TDIR | tr $'\n' '*' | sed -e $'s|*'$RDIR'|'$'\\\n'$RDIR'|g' | sed -e 's|\**$||' | sed -e 's|\s*$||' > $tmpdir/working-soldier-states4.txt
+	found=`wc -l $tmpdir/working-soldier-states4.txt`
+	echo "found $found lines total"
+	$bindir/egrep-soldier-assert-past.sh $TDIR | tr $'\n' '*' | sed -e $'s|*'$RDIR'|'$'\\\n'$RDIR'|g' | sed -e 's|\**$||' | sed -e 's|\s*$||' > $tmpdir/working-soldier-states5.txt
+	found=`wc -l $tmpdir/working-soldier-states5.txt`
+	echo "found $found lines total"
+	$bindir/egrep-gentleman-assert.sh $TDIR | tr $'\n' '*'| sed -e $'s|*'$RDIR'|'$'\\\n'$RDIR'|g' | grep -i soldier  | sed -e 's|\**$||' | sed -e 's|\s*$||' > $tmpdir/working-soldier-states6.txt
+	found=`wc -l $tmpdir/working-soldier-states6.txt`
+	echo "found $found lines total"
+fi
+
+cat $tmpdir/working-soldier-states*.txt | sort | uniq > $tmpdir/simple-soldier-states.txt
 
 # removed reintroduction of newlines
 # | tr '*' $'\n'
