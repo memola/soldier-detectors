@@ -1,5 +1,6 @@
 #!/bin/bash
 pcregrep -i -M "\bwas([\s,()]+(not?|n?ever))?([\s,()]+a)?[\s,()]+([a-z]+-)?(${SINGULAR})(?![\w-])" $1/*
+pcregrep -i -M "\bwere([\s,()]+(not?|n?ever))?([\s,()]+a)?[\s,()]+([a-z]+-)?(${SINGULAR})(?![\w-])" $1/*
 pcregrep -i -M "\bwere([\s,()]+(not?|n?ever))?([\s,()]+all)?[\s,()]+([a-z]+-)?(${PLURAL})(?![\w-])" $1/*
 # have [not] I been [not]
 pcregrep -i -M "\b(ha(ve|d|s|th))([\s,()]+(not?|n?ever))?([\s,()]+(I|thou|s?he|ye))[\s,()]+b(ee?|i)n([\s,()]+(not?|n?ever))?([\s,()]+a)[\s,()]+([a-z]+-)?(${SINGULAR})(?![\w-])" $1/*
