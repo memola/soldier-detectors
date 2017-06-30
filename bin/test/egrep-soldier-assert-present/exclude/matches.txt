@@ -69,6 +69,8 @@ em: you must pardon him gentlemen, a fresh Soldier wants seasoning
 What outrage is this you soldiers?
 Yet I do hope a time wherein we Soldiers,
 I shall be proud to be your Soldier, sir.
+Their ransom would defray your soldiers fee.
+to give to one to rob a million, arm but your self and lead your Soldier
 
 # soldier-like will be a different script
 Take it then thus. All must be Soldier-like;
@@ -87,6 +89,7 @@ And leads is gentleman to his soldiers
 And lead is gentlemen to his soldier
 And lead is scholar to his soldiers
 And leads is scholars to his soldier
+
 
 # oddities
 Infantaria of our Protestant Churches Soldiers, do teach, that touching so

@@ -47,7 +47,8 @@ pcregrep -i -M "\bth[\s]*'?art(([\s,()]+)not?)?([\s,()]+a)?[\s,()]+(${SINGULAR})
 # 'they' and 'you' are singular and plural
 pcregrep -i -M "\bthey[\s]*'?re?(([\s,()]+)not?)?([\s,()]+all)?[\s,()]+(${PLURAL})(?![\w-])" $1/*
 pcregrep -i -M "\byou[\s]*'re?(([\s,()]+)not?)?([\s,()]+all)?[\s,()]+(${PLURAL})(?![\w-])" $1/*
-pcregrep -i -M "\byoure?(([\s,()]+)not?)?([\s,()]+all)?[\s,()]+(${PLURAL})(?![\w-])" $1/*
+# plural form requires the 'e' ending 'youre'
+pcregrep -i -M "\byoure(([\s,()]+)not?)?([\s,()]+all)?[\s,()]+(${PLURAL})(?![\w-])" $1/*
 pcregrep -i -M "\bthey[\s]*'?re?(([\s,()]+)not?)?([\s,()]+a)?[\s,()]+(${SINGULAR})(?![\w-])" $1/*
 pcregrep -i -M "\byou[\s]*'re?(([\s,()]+)not?)?([\s,()]+a)[\s,()]+(${SINGULAR})(?![\w-])" $1/*
-pcregrep -i -M "\byoure?(([\s,()]+)not?)?([\s,()]+a)[\s,()]+(${SINGULAR})s?(?![\w-])" $1/*
+pcregrep -i -M "\byoure?(([\s,()]+)not?)?([\s,()]+a)[\s,()]+(${SINGULAR})(?![\w-])" $1/*
