@@ -8,7 +8,7 @@ pcregrep -i -M "(?<!\bit)[\W]+(is|am)([\s,()]+(not?|n?ever))?([\s,()]+(I|s?he))?
 
 # "are", optional "no" or "not", optional "a", optionally prefixed "soldier"
 pcregrep -i -M "\b(ar[et])([\s,()]+(you|ye|thou))?([\s,()]+(not?|n?ever))?([\s,()]+a)?[\s,()]+([a-z]+-)?(${SINGULAR})(?![\w-])" $1/*
-pcregrep -i -M "\b(are)([\s,()]+(you|ye|they))?([\s,()]+(not?|n?ever))?([\s,()]+all)?[\s,()]+([a-z]+-)?(${PLURAL})(?![\w-])" $1/*
+pcregrep -i -M "\b(are)([\s,()]+(you|[wy]e|they))?([\s,()]+(not?|n?ever))?([\s,()]+all)?[\s,()]+([a-z]+-)?(${PLURAL})(?![\w-])" $1/*
 
 # "be", optional "no" or "not", optional "a", optionally prefixed "soldier" 
 pcregrep -i -M "\b(be)([\s,()]+not)?([\s,()]+a)[\s,()]+([a-z]+-)?(${SINGULAR})(?![\w-])" $1/*
