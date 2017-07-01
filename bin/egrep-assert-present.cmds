@@ -24,7 +24,7 @@ pcregrep -i -M "\b(they)[\s()]+((not?|n?ever)([\s,()]+))?(all[\s,()]+)?([A-z]+-)
 
 # seeming
 pcregrep -i -M "\bseems?([\s,()]+(not?|n?ever))?([\s,()]+a)[\s,()]+(${SINGULAR})(?![\w-])" $1/*
-pcregrep -i -M "\bseem([\s,()]+(not?|n?ever))?([\s,()]+all)[\s,()]+(${PLURAL})(?![\w-])" $1/*
+pcregrep -i -M "\bseem([\s,()]+(not?|n?ever))?([\s,()]+all)?[\s,()]+(${PLURAL})(?![\w-])" $1/*
 
 # being
 pcregrep -i -M "\bbeing([\s,()]+[A-z]+)?([\s,()]+a)[\s,()]+(${SINGULAR})(?![\w-])" $1/*
