@@ -39,7 +39,7 @@ if len(argv) > 3:
 else:
 	out = stdout
 writer = csv.writer(out, lineterminator="\n")
-writer.writerow(['PLAYWRIGHT','STC','TITLE','GENRE','DATE PERFORMANCE','TEXT','COLLECTION?','FILE'])
+writer.writerow(['PLAYWRIGHT','STC','TITLE','GENRE','DATE PERFORMANCE','1080 DECADE','TEXT','COLLECTION?','FILE'])
 with open(argv[2], 'r') as matches:
 	buf = []
 	for line in matches:
@@ -57,9 +57,14 @@ with open(argv[2], 'r') as matches:
 		author = author.strip(';')
 		genre = metadata.get('DEEP genre', '')
 		date = metadata.get('date of 1st performance', '')
+		decade = metadata.get('decade', '')
+		if len(decade) == 0 and len(date) > 0:
+			year = int(date)
+			decade = str(year - (year % 10))
+		decade_1080 = '%4d:::%4d' % (int(decade), int(decade) + 9)
 		stc = metadata.get('estc', '')
 		title = metadata['title']
 		file_name = metadata.get('text_name',key)
-		writer.writerow([author, stc, title, genre, date, match.strip(), not key.endswith('headed.txt'), file_name])
+		writer.writerow([author, stc, title, genre, date, decade_1080, match.strip(), not key.endswith('headed.txt'), file_name])
 if len(argv) > 3:
 	out.close
