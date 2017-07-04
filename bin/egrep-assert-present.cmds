@@ -23,12 +23,12 @@ pcregrep -i -M "\b(we)[\s()]+((not?|n?ever)([\s,()]+))?(all[\s,()]+)([A-z]+-)?($
 pcregrep -i -M "\b(they)[\s()]+((not?|n?ever)([\s,()]+))?(all[\s,()]+)?([A-z]+-)?(${PLURAL})(?![\w-])" $1/*
 
 # seeming
-pcregrep -i -M "\bseems?([\s,()]+(not?|n?ever))?([\s,()]+a)[\s,()]+(${SINGULAR})(?![\w-])" $1/*
-pcregrep -i -M "\bseem([\s,()]+(not?|n?ever))?([\s,()]+all)?[\s,()]+(${PLURAL})(?![\w-])" $1/*
+pcregrep -i -M "\bseems?([\s,()]+(not?|n?ever))?([\s,()]+a)[\s,()]+([A-z]+-)?(${SINGULAR})(?![\w-])" $1/*
+pcregrep -i -M "\bseem([\s,()]+(not?|n?ever))?([\s,()]+all)?[\s,()]+([A-z]+-)?(${PLURAL})(?![\w-])" $1/*
 
 # being
-pcregrep -i -M "\bbeing([\s,()]+[A-z]+)?([\s,()]+a)[\s,()]+(${SINGULAR})(?![\w-])" $1/*
-pcregrep -i -M "\bbeing([\s,()]+[A-z]+)?([\s,()]+all)?[\s,()]+(${PLURAL})(?![\w-])" $1/*
+pcregrep -i -M "\bbeing([\s,()]+[A-z]+)?([\s,()]+a)[\s,()]+([A-z]+-)?(${SINGULAR})(?![\w-])" $1/*
+pcregrep -i -M "\bbeing([\s,()]+[A-z]+)?([\s,()]+all)?[\s,()]+([A-z]+-)?(${PLURAL})(?![\w-])" $1/*
 
 # plural
 # "are", optional "no" or "not", (0-1 words), optionally prefixed "soldiers"
@@ -36,19 +36,20 @@ pcregrep -i -M "\b(ar[et])([\s,()]+(not?|n?ever))?[\s,()]+([A-z]+-)?(${SINGULAR}
 pcregrep -i -M "\b(are)([\s,()]+(not?|n?ever))?[\s,()]+([A-z]+-)?(${PLURAL})(?![\w-])" $1/*
 
 # two states
-pcregrep -i -M "\bI[\s,()]+(am)([\s,()]+an?)?[\s,()]+\w+([A-z]+[\s,()]+){0,5}a\s(${SINGULAR})(?![\w-])" $1/*
+pcregrep -i -M "\bI[\s,()]+(am)([\s,()]+an?)?[\s,()]+\w+([A-z]+[\s,()]+){0,5}a\s([A-z]+-)?(${SINGULAR})(?![\w-])" $1/*
 
 # contractions with the article 'a' for singular verbs or 'all' for plural, optional 'no' or 'not'
-pcregrep -i -M "\bI[\s]*'?me?(([\s,()]+)(not?|n?ever))?([\s,()]+a)[\s,()]+(${SINGULAR})(?![\w-])" $1/*
-pcregrep -i -M "\bs?he[\s]*'?s(([\s,()]+)(not?|n?ever))?([\s,()]+a)[\s,()]+(${SINGULAR})(?![\w-])" $1/*
-pcregrep -i -M "\bthou[\s]*'?rt(([\s,()]+)(not?|n?ever))?([\s,()]+a)?[\s,()]+(${SINGULAR})(?![\w-])" $1/*
-pcregrep -i -M "\bth[\s]*'?art(([\s,()]+)(not?|n?ever))?([\s,()]+a)?[\s,()]+(${SINGULAR})(?![\w-])" $1/*
+pcregrep -i -M "\bI[\s]*'?me?(([\s,()]+)(not?|n?ever))?([\s,()]+a)[\s,()]+([A-z]+-)?(${SINGULAR})(?![\w-])" $1/*
+pcregrep -i -M "\bs?he[\s]*'?s(([\s,()]+)(not?|n?ever))?([\s,()]+a)[\s,()]+([A-z]+-)?(${SINGULAR})(?![\w-])" $1/*
+pcregrep -i -M "\bthou[\s]*'?rt(([\s,()]+)(not?|n?ever))?([\s,()]+a)?[\s,()]+([A-z]+-)?(${SINGULAR})(?![\w-])" $1/*
+pcregrep -i -M "\bth[\s]*'?art(([\s,()]+)(not?|n?ever))?([\s,()]+a)?[\s,()]+([A-z]+-)?(${SINGULAR})(?![\w-])" $1/*
 
 # 'they' and 'you' are singular and plural
-pcregrep -i -M "\bthey[\s]*'?re?(([\s,()]+)(not?|n?ever))?([\s,()]+all)?[\s,()]+(${PLURAL})(?![\w-])" $1/*
-pcregrep -i -M "\byou[\s]*'re?(([\s,()]+)(not?|n?ever))?([\s,()]+all)?[\s,()]+(${PLURAL})(?![\w-])" $1/*
+pcregrep -i -M "\bthey[\s]*'?re?(([\s,()]+)(not?|n?ever))?([\s,()]+all)?[\s,()]+([A-z]+-)?(${PLURAL})(?![\w-])" $1/*
+pcregrep -i -M "\byou[\s]*'re?(([\s,()]+)(not?|n?ever))?([\s,()]+all)?[\s,()]+([A-z]+-)?(${PLURAL})(?![\w-])" $1/*
 # plural form requires the 'e' ending 'youre'
-pcregrep -i -M "\byoure(([\s,()]+)(not?|n?ever))?([\s,()]+all)?[\s,()]+(${PLURAL})(?![\w-])" $1/*
-pcregrep -i -M "\bthey[\s]*'?re?(([\s,()]+)(not?|n?ever))?([\s,()]+a)?[\s,()]+(${SINGULAR})(?![\w-])" $1/*
-pcregrep -i -M "\byou[\s]*'re?(([\s,()]+)(not?|n?ever))?([\s,()]+a)[\s,()]+(${SINGULAR})(?![\w-])" $1/*
-pcregrep -i -M "\byoure?(([\s,()]+)(not?|n?ever))?([\s,()]+a)[\s,()]+(${SINGULAR})(?![\w-])" $1/*
+pcregrep -i -M "\bwe[\s]*'re?(([\s,()]+)(not?|n?ever))?[\s,()]+([A-z]+-)?(${PLURAL})(?![\w-])" $1/*
+pcregrep -i -M "\byoure(([\s,()]+)(not?|n?ever))?([\s,()]+all)?[\s,()]+([A-z]+-)?(${PLURAL})(?![\w-])" $1/*
+pcregrep -i -M "\bthey[\s]*'?re?(([\s,()]+)(not?|n?ever))?([\s,()]+a)?[\s,()]+([A-z]+-)?(${SINGULAR})(?![\w-])" $1/*
+pcregrep -i -M "\byou[\s]*'re?(([\s,()]+)(not?|n?ever))?([\s,()]+a)[\s,()]+([A-z]+-)?(${SINGULAR})(?![\w-])" $1/*
+pcregrep -i -M "\byoure?(([\s,()]+)(not?|n?ever))?([\s,()]+a)[\s,()]+([A-z]+-)?(${SINGULAR})(?![\w-])" $1/*

@@ -83,6 +83,8 @@ she's a soldier
 shes a soldier
 they're soldiers
 theyre soldiers
+we're soldiers
+we're night-soldiers
 
 # participles
 Being both a soldier and philosopher,
