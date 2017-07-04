@@ -16,7 +16,7 @@ for case in $cases; do
 		rm -r $tmpdir/$case/*
 	fi
 	ctr=0
-	while IFS='$\n' read -r line; do
+	while IFS=$'\n' read -r line; do
 		ctr=$(($ctr+1))
 		fname=`printf %03d $ctr`
 		mkdir -p $tmpdir/$case/$fname
@@ -29,7 +29,7 @@ for case in $cases; do
 		grep -v -e '^#' $casedir/include/multiline.txt | grep -v -e '^$' > $tmpdir/$case/$fname/yes.txt
 	fi
 
-	while IFS='$\n' read -r line; do
+	while IFS=$'\n' read -r line; do
 		ctr=$(($ctr+1))
 		fname=`printf %03d $ctr`
 		mkdir -p $tmpdir/$case/$fname

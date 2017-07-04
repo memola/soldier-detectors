@@ -1,0 +1,117 @@
+(apothec|not)ary	(apothec|not)aries
+armou?rer	armou?rers
+bachelor	bachelors
+# below is baker or banker
+ban?ker	ban?kers
+barber	barbers
+bowyer	bowyers
+brasier	brasiers
+# brother (in or of) (a word) trade
+brother\s+(of|in)\s+[A-z]+\s+trades?	brothers\s+(of|in)\s+[A-z]+\s+trades?
+brewer	brewers
+butcher	butchers
+captain	captains
+carter carters
+carpenter	carpenters
+caster	casters
+ceiler	ceilers
+chandler	chandlers
+chiurgeon	chiurgeons
+cobbler	cobblers
+cordwainer	cordwainers
+commander	commanders
+collier	collier
+cook	cooks
+cooper	coopers
+courtier	courtiers
+cutler	cutlers
+dentist	dentists
+distiller	distillers
+doctor	doctors
+draper	drapers
+drawer	drawers
+dyer	dyers
+(em)?broi?derer	(em)?broi?derers
+engineer	engineers
+fletcher	fletchers
+fruiter(er)?	fruiter(er)?s
+gardener	gardeners
+girdler	girdlers
+glover	glovers
+goldsmith	goldsmiths
+grocer	grocers
+haberdasher	haberdashers
+innholder	innholders
+joiner	joiners
+knitter	knitters
+loriner	loriners
+lover	lovers
+mariner	mariners
+mercer	mercers
+melter	melters
+musician	musicians
+officer	officer
+orator	orators
+painter	painters
+pav(e|io)r	pav(e|io)rs
+pedlar	pedlars
+pewterer	pewterers
+philosopher	philosophers
+plai?sterer	plai?sterers
+plumber	plumbers
+poet	poets
+poulter(er)?	poulter(er)?s
+roarer	roarers
+sadd?ler	sadd?lers
+salter	salters
+scholar	scholars
+scri[bv]('?e?ner|e)	scri[bv]('?e?ner|e)s
+shepherd	shepherds
+skinner	skinners
+stainer	stainers
+stationer	stationers
+surgeon	surgeons
+# tailor taylor tyler
+t(a[iy]|y)l[oe]r	t(a[iy]|y)l[oe]rs
+tanner	tanners
+merchant[\-\s]taylor	merchant[\-\s]taylors
+tavern[\-\s]keeper	tavern[\-\s]keepers
+tinker	tinkers
+uphol(d|ster)er	uphol(d|ster)ers
+vintner	vintners
+weaver	weavers
+# below is gentleman, carman, cartman, craftsman, woolman
+(gentle|cart?|crafts|wool)man	(gentle|cart?|crafts|wool)men
+# below is turners, horners, etc
+(tu|ho)rner	(tu|ho)rners
+# below is farriers, curriers, glaziers, etc
+[A-z]+(rr|[sz])i?er	[A-z]+(rr|[sz])i?ers
+# below is ending in builder (shipbuilder or builder)
+[A-z]*builder	[A-z]*builders
+# below is ending in founder (ironfounder or founder)
+[A-z]*founder	[A-z]*founders
+# below is ending in keeper (innkeeper or keeper)
+[A-z]*keeper	[A-z]*keepers
+# below is ending in layer (bricklayer or layer)
+[A-z]*layer	[A-z]*layers
+# below is ending in maker (feltmaker or maker)
+[A-z]*maker	[A-z]*makers
+# below is ending in mason (stonemason or mason)
+[A-z]*mason	[A-z]*masons
+# below is ending in monger (fishmonger or monger)
+[A-z]*monger	[A-z]*mongers
+# below is ending in seller (leatherseller or seller)
+[A-z]*seller	[A-z]*sellers
+# below is ending in smith (blacksmiths or smith)
+[A-z]*smith	[A-z]*smiths
+# below is ending in worker (clothworker or worker)
+[A-z]*worker	[A-z]*workers
+# below is ending in wright (playwright or wright)
+[A-z]*wright	[A-z]*wrights
+# below is ending in tenant (lieutenant or tenant)
+[A-z']*tenant	[A-z']*tenants
+# below is words ending in following but with preceding letters or apostrophe:
+## keur,leur,neur,meur,veur
+## kour,lour,nour,mour,vour
+# excluding never, ever, your, and honor
+([A-z']+[klnmv]i?[eo]ur(?<!your|honour))	([A-z']+[klnmv]i?[eo]urs(?<!yours|honours))
