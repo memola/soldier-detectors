@@ -87,7 +87,7 @@ weaver	weavers
 # below is turners, horners, etc
 (tu|ho)rner	(tu|ho)rners
 # below is farriers, curriers, glaziers, etc
-[A-z]+(rr|[sz])i?er	[A-z]+(rr|[sz])i?ers
+[A-z]+(rr|[sz])iere?	[A-z]+(rr|[sz])iere?s
 # below is ending in builder (shipbuilder or builder)
 [A-z]*builder	[A-z]*builders
 # below is ending in founder (ironfounder or founder)
